@@ -1,5 +1,5 @@
 # minijQuery
-迷你库
+###迷你库
 
 **miniJQuery**是一个小型的封装函数存放库
 
