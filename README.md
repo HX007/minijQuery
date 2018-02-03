@@ -1,10 +1,10 @@
 # minijQuery
 ## 迷你库
 
-** miniJQuery**是一个小型的封装函数存放库
+* ** miniJQuery**是一个小型的封装函数存放库
 
 ### 1.十六进制颜色值
-    - 该函数会返回一个**随机的**十六进制颜色值，需要一个变量来接收
+    * 该函数会返回一个**随机的**十六进制颜色值，需要一个变量来接收
 
     ```javascript
     function randomColor(){
@@ -18,8 +18,8 @@
     ```
 
 ### 2.查询元素节点
-    - 该函数期望接收一个参数，返回node节点或nodeLIst
-    - 该参数为:标准的css选择器或标签名(string类型)
+    * 该函数期望接收一个参数，返回node节点或nodeLIst
+    * 该参数为:标准的css选择器或标签名(string类型)
 
     ```javascript
     function getAll(all){
@@ -42,11 +42,11 @@
     ```
 
 ### 3.事件绑定
-    - 该函数期望传入三个参数
-    - 参数1.   要枚举的元素集合，
-    - 参数2.   要绑定的事件，
-    - 参数3.   要做的事情
-    - bindEvent(捆绑事件)
+    * 该函数期望传入三个参数
+    * 参数1.   要枚举的元素集合，
+    * 参数2.   要绑定的事件，
+    * 参数3.   要做的事情
+    * bindEvent(捆绑事件)
 
     ``` javascript
     function bindEvent(){
@@ -68,9 +68,9 @@
     ```
 
 ### 4.实现insertAfter
-    - 该函数期待传入两个参数
-    - 参数1. newElement (要参入的元素节点)
-    - 参数2. location (要插入的位置节点)
+    * 该函数期待传入两个参数
+    * 参数1. newElement (要参入的元素节点)
+    * 参数2. location (要插入的位置节点)
 
     ```javascript
     function insertAfter(newElement,location){
@@ -85,7 +85,7 @@
     ```
 
 ### 5.重新实现nextSibling
-    - 该函数期望传入一个node节点,返回离它最近的下一个兄弟元素节点
+    * 该函数期望传入一个node节点,返回离它最近的下一个兄弟元素节点
 
     ```javascript
     function nextBrotherNode(brother){
@@ -99,7 +99,7 @@
     ```
 
 ### 6.寻找子元素节点
-    - 该函数期望传入一个node节点，返回该节点里面的所有子元素节点
+    * 该函数期望传入一个node节点，返回该节点里面的所有子元素节点
 
     ```javascript
     function sunchild(sun){
