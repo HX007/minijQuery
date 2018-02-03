@@ -1,5 +1,5 @@
 # minijQuery #
-####迷你库####
+**迷你库**
 
 **miniJQuery**是一个小型的封装函数存放库
 
@@ -19,28 +19,27 @@
 ##2.查询元素节点##
     - 该函数期望接收一个参数，返回node节点或nodeLIst
     - 该参数为:标准的css选择器或标签名（string类型） 
-```
-    function getAll(all){
-    	var age = all.slice(1)
-    	var result;
-    	if(all[0] == "#"){
-    		result =  document.getElementById(age)
-    	}
-    	if(all[0] == "."){
-    		result =  document.getElementsByClassName(age)
-    	}
-    	if(all[0] != "#"&&all[0] != "."){
-    		result =  document.getElementsByTagName(all)
-    	}
-    	if(!result || result.length == 0){
-    		result =  "你传入的参数既不是ID选择器,也不是class选择器,更不是标签"
-    	}
-    	return result;
-    }
-```
+    ```
+        function getAll(all){
+        	var age = all.slice(1)
+        	var result;
+        	if(all[0] == "#"){
+        		result =  document.getElementById(age)
+        	}
+        	if(all[0] == "."){
+        		result =  document.getElementsByClassName(age)
+        	}
+        	if(all[0] != "#"&&all[0] != "."){
+        		result =  document.getElementsByTagName(all)
+        	}
+        	if(!result || result.length == 0){
+        		result =  "你传入的参数既不是ID选择器,也不是class选择器,更不是标签"
+        	}
+        	return result;
+        }
+    ```
 
 ##3.事件绑定##
-
     -    该函数期望传入三个参数
     -    参数1.   要枚举的元素集合，
     -    参数2.   要绑定的事件，
