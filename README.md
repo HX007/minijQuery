@@ -72,7 +72,7 @@
     - 该函数期待传入两个参数
     - 参数1. newElement (要参入的元素节点)
     - 参数2. location (要插入的位置节点)
-    
+
     ```
         function insertAfter(newElement,location){
         	var parent=location.parentNode
@@ -87,6 +87,7 @@
 
 ###5.重新实现nextSibling###
     - 该函数期望传入一个node节点,返回离它最近的下一个兄弟元素节点
+
     ```
         function nextBrotherNode(brother){
         	while(brother.nextSibling.nodeType!=1){
@@ -100,6 +101,7 @@
 
 ###6.寻找子元素节点###
     - 该函数期望传入一个node节点，返回该节点里面的所有子元素节点
+    
     ```
         function sunchild(sun){
         	for(var a=0;a<sun.childNodes.length;a++){
