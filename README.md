@@ -4,7 +4,8 @@
 
 ### 1.十六进制颜色值
 * 该函数会返回一个**随机的**十六进制颜色值，需要一个变量来接收
-```javascript
+```
+
 function randomColor(){
 	var datas = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"]
 	var colour = "#"

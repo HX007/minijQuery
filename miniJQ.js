@@ -54,9 +54,11 @@ function bindEvent(){
 			var z = arguments[b]
 		}
 	}
+
 	for(var a=0;a<x.length;a++){
 		x[a][y] = z	
 	}
+	
 }
 
 
@@ -137,5 +139,82 @@ function nextborther(obj,names){
 function getspList(node,string){
 	return node.getElementsByClassName(string);
 }
+
+
+
+
+
+// *************************轮播图部分****************************
+
+//初始化span点击小方块
+// 该函数期望传入两个参数：(jQuery对象)
+// age1: 要被插入的对象box
+// age2: 需要插入方块的对象集合（长度）
+function blockage(age1,age2){
+	for(var a=0;a<age2.length;a++){
+		var createSpan = $("<span></span>")//创建
+		createSpan.attr("index",a)	//设置非法属性
+		createSpan.appendTo(age1)//插入JQ对象
+	}
+}
+
+
+// x = 0   公用的x
+//小方块点击事件
+//该函数期望传入两个参数：(jQuery对象)
+// age1: 需要点击的span对象集合
+// age2: 需要显示的盒子对象集合
+function dotCilck(age1,age2){
+	age1.click(function(){
+		hidden(age1,age2)  //调用全部隐藏函数
+		var x = Number($(this).attr("index")) // 获取非法属性值，当成图片的位置用
+		age2.eq(x).fadeIn(500)	// 盒子渐显
+		age1.eq(x).addClass("focus") // span加样式
+	})
+}
+
+
+
+
+
+
+
+
+
+// ******************************Cookie部分***************************
+
+
+//该函数期望传入一个参数：属性名(String),返回所对应的属性值
+function acquireCookie(receive){
+	var str = document.cookie
+	var sarteIndex = str.indexOf(receive)
+	var endIndex = str.indexOf(";",sarteIndex)
+	if(endIndex==-1){
+		endIndex = str.length
+	}
+	var incision = str.slice(sarteIndex,endIndex)
+	var array = incision.split("=")[1]
+	return array
+}
+
+
+/*该函数设置Cookie  期望传入两个参数：
+参数一：data (obj / String)
+参数二：day  (生命周期。。天数)*/
+function setCookie(data,day){
+	var date = new Date()
+	date.setDate(date.getDate()+day)
+	for(var i in data){
+		document.cookie = i+"="+data[i]+";expires="+date;
+	}
+}
+
+//该函数删除Cookie 期望传入属性名
+function removeCookie(target){
+	var date = new Date()
+	date.setDate(-1)
+	document.cookie = target+"=0;expires="+ date
+}
+
 
 
